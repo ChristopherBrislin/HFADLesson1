@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HFADLesson1</string>
+    <string name="brands">Car Brands</string>
+    <string name="button_text">Find Cars!</string>
+    <string-array name="spinner_items">
+        <item>Audi</item>
+        <item>Toyota</item>
+        <item>Mazda</item>
+
+    </string-array>
+
+    <string name="Toyota">Yaris</string>
+    <string name="Audi">S3</string>
+    <string name="Mazda">BT50</string>
+</resources>
