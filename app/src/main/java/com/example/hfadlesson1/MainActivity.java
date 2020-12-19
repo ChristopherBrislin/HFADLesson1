@@ -2,12 +2,15 @@ package com.example.hfadlesson1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String SELECTED_BRAND = "com.example.hfadlesson1.BRAND";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,20 +19,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void findVehicles(View view){
+        Intent intent = new Intent(this, ShowActivity.class);
         Spinner carBrand = (Spinner) findViewById(R.id.vehicle_type);
-        TextView cars = (TextView) findViewById(R.id.text);
-        switch(String.valueOf(carBrand.getSelectedItem())){
-            case("Toyota"):
-                cars.setText("Yaris");
-                break;
-            case("Mazda"):
-                cars.setText("BT50");
-                break;
-            case("Audi"):
-                cars.setText("S3");
-                break;
-            default:
-                break;
-        }
+        String selectedBrand = String.valueOf(carBrand.getSelectedItem());
+
+        intent.putExtra(SELECTED_BRAND, selectedBrand);
+        startActivity(intent);
+        /*
+
+        */
     }
 }

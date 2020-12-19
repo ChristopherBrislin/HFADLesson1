@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HFADLesson1</string>
+    <string name="app_name">Cars</string>
     <string name="brands">Car Brands</string>
     <string name="button_text">Find Cars!</string>
     <string-array name="spinner_items">
